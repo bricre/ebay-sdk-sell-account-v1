@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This type is used by the <b>shippingServices</b> array, an array that provides

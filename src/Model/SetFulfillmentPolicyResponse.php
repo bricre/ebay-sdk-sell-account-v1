@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * Complex type that that gets populated with a response containing a fulfillment
@@ -17,6 +17,15 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
+
+    /**
+     * A seller-defined description of the fulfillment policy. This description is only
+     * for the seller's use, and is not exposed on any eBay pages. This field is
+     * returned if set for the policy. <br/><br/><b>Max length</b>: 250.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * If returned as <code>true</code>, the seller offers freight shipping. Freight

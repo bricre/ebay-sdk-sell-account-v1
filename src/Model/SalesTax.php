@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This type is used to provide sales tax settings for a specific tax jurisdiction.

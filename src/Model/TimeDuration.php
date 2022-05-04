@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * A type used to specify a period of time using a specified time-measurement unit.

@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * Type used by the payments program onboarding response.

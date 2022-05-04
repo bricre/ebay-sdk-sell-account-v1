@@ -3,8 +3,7 @@
 namespace Ebay\Sell\Account\V1\Api;
 
 use Ebay\Sell\Account\V1\Model\Program as ProgramModel;
-use Ebay\Sell\Account\V1\Model\Programs as Programs;
-use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
+use Ebay\Sell\Account\V1\Model\Programs;
 
 class Program extends AbstractAPI
 {
@@ -15,9 +14,13 @@ class Program extends AbstractAPI
      */
     public function getOptedIns(): Programs
     {
-        return $this->client->request('getOptedInPrograms', 'GET', 'program/get_opted_in_programs',
-            [
-            ]
+        return $this->request(
+        'getOptedInPrograms',
+        'GET',
+        'program/get_opted_in_programs',
+        null,
+        [],
+        []
         );
     }
 
@@ -37,10 +40,13 @@ class Program extends AbstractAPI
      */
     public function optInTo(ProgramModel $Model): object
     {
-        return $this->client->request('optInToProgram', 'POST', 'program/opt_in',
-            [
-                'json' => $Model->getArrayCopy(),
-            ]
+        return $this->request(
+        'optInToProgram',
+        'POST',
+        'program/opt_in',
+        $Model->getArrayCopy(),
+        [],
+        []
         );
     }
 
@@ -55,10 +61,13 @@ class Program extends AbstractAPI
      */
     public function optOutOf(ProgramModel $Model): object
     {
-        return $this->client->request('optOutOfProgram', 'POST', 'program/opt_out',
-            [
-                'json' => $Model->getArrayCopy(),
-            ]
+        return $this->request(
+        'optOutOfProgram',
+        'POST',
+        'program/opt_out',
+        $Model->getArrayCopy(),
+        [],
+        []
         );
     }
 }

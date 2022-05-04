@@ -2,12 +2,11 @@
 
 namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\Sell\Account\V1\Model\SalesTax as SalesTaxModel;
-use Ebay\Sell\Account\V1\Model\SalesTaxBase as SalesTaxBase;
-use Ebay\Sell\Account\V1\Model\SalesTaxes as SalesTaxes;
-use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
+use Ebay\Sell\Account\V1\Model\SalesTax;
+use Ebay\Sell\Account\V1\Model\SalesTaxBase;
+use Ebay\Sell\Account\V1\Model\SalesTaxes;
 
-class SalesTax extends AbstractAPI
+class Tax extends AbstractAPI
 {
     /**
      * This call gets the current sales tax table entry for a specific tax
@@ -27,13 +26,17 @@ class SalesTax extends AbstractAPI
      *                               tax jurisdiction for the tax table entry you want to retrieve. Retrieve valid
      *                               jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.
      *
-     * @return SalesTaxModel
+     * @return SalesTax
      */
-    public function get(string $countryCode, string $jurisdictionId): SalesTaxModel
+    public function get(string $countryCode, string $jurisdictionId): SalesTax
     {
-        return $this->client->request('getSalesTax', 'GET', "sales_tax/{$countryCode}/{$jurisdictionId}",
-            [
-            ]
+        return $this->request(
+        'getSalesTax',
+        'GET',
+        "sales_tax/$countryCode/$jurisdictionId",
+        null,
+        [],
+        []
         );
     }
 
@@ -72,10 +75,13 @@ class SalesTax extends AbstractAPI
      */
     public function createOrReplace(string $countryCode, string $jurisdictionId, SalesTaxBase $Model): mixed
     {
-        return $this->client->request('createOrReplaceSalesTax', 'PUT', "sales_tax/{$countryCode}/{$jurisdictionId}",
-            [
-                'json' => $Model->getArrayCopy(),
-            ]
+        return $this->request(
+        'createOrReplaceSalesTax',
+        'PUT',
+        "sales_tax/$countryCode/$jurisdictionId",
+        $Model->getArrayCopy(),
+        [],
+        []
         );
     }
 
@@ -96,9 +102,13 @@ class SalesTax extends AbstractAPI
      */
     public function delete(string $countryCode, string $jurisdictionId): mixed
     {
-        return $this->client->request('deleteSalesTax', 'DELETE', "sales_tax/{$countryCode}/{$jurisdictionId}",
-            [
-            ]
+        return $this->request(
+        'deleteSalesTax',
+        'DELETE',
+        "sales_tax/$countryCode/$jurisdictionId",
+        null,
+        [],
+        []
         );
     }
 
@@ -122,10 +132,13 @@ class SalesTax extends AbstractAPI
      */
     public function getes(array $queries = []): SalesTaxes
     {
-        return $this->client->request('getSalesTaxes', 'GET', 'sales_tax',
-            [
-                'query' => $queries,
-            ]
+        return $this->request(
+        'getSalesTaxes',
+        'GET',
+        'sales_tax',
+        null,
+        $queries,
+        []
         );
     }
 }

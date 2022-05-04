@@ -2,8 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\Sell\Account\V1\Model\PaymentsProgramOnboardingResponse as PaymentsProgramOnboardingResponse;
-use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
+use Ebay\Sell\Account\V1\Model\PaymentsProgramOnboardingResponse;
 
 class Onboarding extends AbstractAPI
 {
@@ -23,9 +22,13 @@ class Onboarding extends AbstractAPI
      */
     public function getPaymentsProgram(string $marketplace_id, string $payments_program_type): PaymentsProgramOnboardingResponse
     {
-        return $this->client->request('getPaymentsProgramOnboarding', 'GET', "payments_program/{$marketplace_id}/{$payments_program_type}/onboarding",
-            [
-            ]
+        return $this->request(
+        'getPaymentsProgramOnboarding',
+        'GET',
+        "payments_program/$marketplace_id/$payments_program_type/onboarding",
+        null,
+        [],
+        []
         );
     }
 }

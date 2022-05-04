@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * Complex type that that gets populated with a response containing a payment
@@ -26,6 +26,15 @@ class SetPaymentPolicyResponse extends AbstractModel
      * @var \Ebay\Sell\Account\V1\Model\Deposit
      */
     public $deposit = null;
+
+    /**
+     * A seller-defined description of the payment business policy. This description is
+     * only for the seller's use, and is not exposed on any eBay pages. This field is
+     * returned if set for the policy. <br/><br/><b>Max length</b>: 250.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * The number of days (after the buyer commits to buy) that a buyer has to pay the

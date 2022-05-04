@@ -2,10 +2,9 @@
 
 namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\Sell\Account\V1\Model\RateTableResponse as RateTableResponse;
-use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
+use Ebay\Sell\Account\V1\Model\RateTableResponse;
 
-class RateTable extends AbstractAPI
+class Table extends AbstractAPI
 {
     /**
      * This method retrieves a seller's <i>shipping rate tables</i> for the country
@@ -44,10 +43,13 @@ class RateTable extends AbstractAPI
      */
     public function gets(array $queries = []): RateTableResponse
     {
-        return $this->client->request('getRateTables', 'GET', 'rate_table',
-            [
-                'query' => $queries,
-            ]
+        return $this->request(
+        'getRateTables',
+        'GET',
+        'rate_table',
+        null,
+        $queries,
+        []
         );
     }
 }

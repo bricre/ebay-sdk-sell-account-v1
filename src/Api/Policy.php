@@ -2,13 +2,12 @@
 
 namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\Sell\Account\V1\Model\ReturnPolicy as ReturnPolicyModel;
-use Ebay\Sell\Account\V1\Model\ReturnPolicyRequest as ReturnPolicyRequest;
-use Ebay\Sell\Account\V1\Model\ReturnPolicyResponse as ReturnPolicyResponse;
-use Ebay\Sell\Account\V1\Model\SetReturnPolicyResponse as SetReturnPolicyResponse;
-use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
+use Ebay\Sell\Account\V1\Model\ReturnPolicy;
+use Ebay\Sell\Account\V1\Model\ReturnPolicyRequest;
+use Ebay\Sell\Account\V1\Model\ReturnPolicyResponse;
+use Ebay\Sell\Account\V1\Model\SetReturnPolicyResponse;
 
-class ReturnPolicy extends AbstractAPI
+class Policy extends AbstractAPI
 {
     /**
      * This method retrieves all the return policies configured for the marketplace you
@@ -33,10 +32,13 @@ class ReturnPolicy extends AbstractAPI
      */
     public function getReturnPolicies(array $queries = []): ReturnPolicyResponse
     {
-        return $this->client->request('getReturnPolicies', 'GET', 'return_policy',
-            [
-                'query' => $queries,
-            ]
+        return $this->request(
+        'getReturnPolicies',
+        'GET',
+        'return_policy',
+        null,
+        $queries,
+        []
         );
     }
 
@@ -58,10 +60,13 @@ class ReturnPolicy extends AbstractAPI
      */
     public function create(ReturnPolicyRequest $Model): SetReturnPolicyResponse
     {
-        return $this->client->request('createReturnPolicy', 'POST', 'return_policy',
-            [
-                'json' => $Model->getArrayCopy(),
-            ]
+        return $this->request(
+        'createReturnPolicy',
+        'POST',
+        'return_policy',
+        $Model->getArrayCopy(),
+        [],
+        []
         );
     }
 
@@ -72,13 +77,17 @@ class ReturnPolicy extends AbstractAPI
      * @param string $return_policy_id this path parameter specifies the of the return
      *                                 policy you want to retrieve
      *
-     * @return ReturnPolicyModel
+     * @return ReturnPolicy
      */
-    public function get(string $return_policy_id): ReturnPolicyModel
+    public function get(string $return_policy_id): ReturnPolicy
     {
-        return $this->client->request('getReturnPolicy', 'GET', "return_policy/{$return_policy_id}",
-            [
-            ]
+        return $this->request(
+        'getReturnPolicy',
+        'GET',
+        "return_policy/$return_policy_id",
+        null,
+        [],
+        []
         );
     }
 
@@ -96,10 +105,13 @@ class ReturnPolicy extends AbstractAPI
      */
     public function update(string $return_policy_id, ReturnPolicyRequest $Model): SetReturnPolicyResponse
     {
-        return $this->client->request('updateReturnPolicy', 'PUT', "return_policy/{$return_policy_id}",
-            [
-                'json' => $Model->getArrayCopy(),
-            ]
+        return $this->request(
+        'updateReturnPolicy',
+        'PUT',
+        "return_policy/$return_policy_id",
+        $Model->getArrayCopy(),
+        [],
+        []
         );
     }
 
@@ -114,9 +126,13 @@ class ReturnPolicy extends AbstractAPI
      */
     public function delete(string $return_policy_id): mixed
     {
-        return $this->client->request('deleteReturnPolicy', 'DELETE', "return_policy/{$return_policy_id}",
-            [
-            ]
+        return $this->request(
+        'deleteReturnPolicy',
+        'DELETE',
+        "return_policy/$return_policy_id",
+        null,
+        [],
+        []
         );
     }
 
@@ -141,14 +157,17 @@ class ReturnPolicy extends AbstractAPI
      *                       'name'	string	This query parameter specifies the seller-defined name of the
      *                       return policy you want to retrieve.
      *
-     * @return ReturnPolicyModel
+     * @return ReturnPolicy
      */
-    public function getByName(array $queries = []): ReturnPolicyModel
+    public function getByName(array $queries = []): ReturnPolicy
     {
-        return $this->client->request('getReturnPolicyByName', 'GET', 'return_policy/get_by_policy_name',
-            [
-                'query' => $queries,
-            ]
+        return $this->request(
+        'getReturnPolicyByName',
+        'GET',
+        'return_policy/get_by_policy_name',
+        null,
+        $queries,
+        []
         );
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This container defines a seller's custom policy identified by policy ID for the
@@ -19,6 +19,15 @@ class CustomPolicy extends AbstractModel
      * @var string
      */
     public $customPolicyId = null;
+
+    /**
+     * Details of the seller's specific policy and terms associated with the policy.
+     * Buyers access this information from the View Item page for items to which the
+     * policy has been applied.<br/><br/><b>Max length:</b> 15,000.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * Customer-facing label shown on View Item pages for items to which the policy

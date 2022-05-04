@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * The category type discerns whether the policy applies to motor vehicle listings,
@@ -13,6 +13,16 @@ use OpenAPI\Runtime\AbstractModel as AbstractModel;
  */
 class CategoryType extends AbstractModel
 {
+    /**
+     * <span class="tablenote"><strong>Note:</strong> This field has been deprecated
+     * and is no longer used.<ul><li>Do not include this field in any <b>create</b> or
+     * <b>update</b> method.</li><li>This field may be returned within the payload of a
+     * <b>get</b> method, but it can be ignored.</li></ul></span>.
+     *
+     * @var bool
+     */
+    public $default = null;
+
     /**
      * The category type to which the policy applies (motor vehicles or non-motor
      * vehicles). <br /><br />The <code>MOTORS_VEHICLES</code> category type is not

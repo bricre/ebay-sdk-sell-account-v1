@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This type is used by the <b>paymentPolicy</b> response container, a container
@@ -33,6 +33,15 @@ class PaymentPolicy extends AbstractModel
      * @var \Ebay\Sell\Account\V1\Model\Deposit
      */
     public $deposit = null;
+
+    /**
+     * A seller-defined description of the payment policy. This description is only for
+     * the seller's use, and is not exposed on any eBay pages.  <br/><br/><b>Max
+     * length</b>: 250.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * This container applies to motor vehicles listings only and indicates when a

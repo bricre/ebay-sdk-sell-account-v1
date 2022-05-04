@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This root container defines a seller's payment business policy for a specific
@@ -34,6 +34,15 @@ class PaymentPolicyRequest extends AbstractModel
      * @var \Ebay\Sell\Account\V1\Model\Deposit
      */
     public $deposit = null;
+
+    /**
+     * A seller-defined description of the payment business policy. This description is
+     * only for the seller's use, and is not exposed on any eBay pages.
+     * <br/><br/><b>Max length</b>: 250.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * This container is used to specify the number of days that a buyer has to make

@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This type is used by the request payload of the createCustomPolicy method to
@@ -10,6 +10,14 @@ use OpenAPI\Runtime\AbstractModel as AbstractModel;
  */
 class CustomPolicyCreateRequest extends AbstractModel
 {
+    /**
+     * Details of the seller's specific policy and terms for this
+     * policy.<br/><br/><b>Max length:</b> 15,000.
+     *
+     * @var string
+     */
+    public $description = null;
+
     /**
      * Customer-facing label shown on View Item pages for items to which the policy
      * applies. This seller-defined string is displayed as a system-generated hyperlink

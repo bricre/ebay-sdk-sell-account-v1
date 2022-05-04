@@ -2,7 +2,7 @@
 
 namespace Ebay\Sell\Account\V1\Model;
 
-use OpenAPI\Runtime\AbstractModel as AbstractModel;
+use OpenAPI\Runtime\AbstractModel;
 
 /**
  * This root container defines a seller's return business policy for a specific
@@ -21,6 +21,15 @@ class ReturnPolicyRequest extends AbstractModel
      * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
+
+    /**
+     * A seller-defined description of the return business policy. This description is
+     * only for the seller's use, and is not exposed on any eBay pages.
+     * <br/><br/><b>Max length</b>: 250.
+     *
+     * @var string
+     */
+    public $description = null;
 
     /**
      * <p class="tablenote"><span  style="color: #dd1e31;"><b>Important!</b></span>
