@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -25,7 +25,7 @@ class PaymentsProgramOnboardingResponse extends AbstractModel
      * <strong>status</strong>, and a <strong>webUrl</strong> to the
      * <code>IN_PROGRESS</code> step. The step names are returned in sequential order.
      *
-     * @var \Ebay\sell\account\v1\Model\PaymentsProgramOnboardingSteps[]
+     * @var \Ebay\Sell\Account\V1\Model\PaymentsProgramOnboardingSteps[]
      */
     public $steps = null;
 }

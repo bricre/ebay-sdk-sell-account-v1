@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -16,7 +16,7 @@ class FulfillmentPolicyRequest extends AbstractModel
      * applies to motor vehicle listings, or if it applies to non-motor vehicle
      * listings.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -69,7 +69,7 @@ class FulfillmentPolicyRequest extends AbstractModel
      * Results pages. To offer zero-day or one-day handling, set field to '0' or '1',
      * respectively.</p>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $handlingTime = null;
 
@@ -142,7 +142,7 @@ class FulfillmentPolicyRequest extends AbstractModel
      * cost and other details for every available domestic and international shipping
      * service option. </p>.
      *
-     * @var \Ebay\sell\account\v1\Model\ShippingOption[]
+     * @var \Ebay\Sell\Account\V1\Model\ShippingOption[]
      */
     public $shippingOptions = null;
 
@@ -182,7 +182,7 @@ class FulfillmentPolicyRequest extends AbstractModel
      * href="https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/symbols-and-abbreviations.page">two-digit
      * abbreviations</a> used by the Canada Post.
      *
-     * @var \Ebay\sell\account\v1\Model\RegionSet
+     * @var \Ebay\Sell\Account\V1\Model\RegionSet
      */
     public $shipToLocations = null;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -15,7 +15,7 @@ class RateTableResponse extends AbstractModel
      * be returned as empty if the seller has no defined shipping rate tables for the
      * specified marketplace.
      *
-     * @var \Ebay\sell\account\v1\Model\RateTable[]
+     * @var \Ebay\Sell\Account\V1\Model\RateTable[]
      */
     public $rateTables = null;
 }

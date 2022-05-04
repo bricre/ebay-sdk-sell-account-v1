@@ -1,10 +1,10 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\SalesTax as SalesTaxModel;
-use Ebay\sell\account\v1\Model\SalesTaxBase as SalesTaxBase;
-use Ebay\sell\account\v1\Model\SalesTaxes as SalesTaxes;
+use Ebay\Sell\Account\V1\Model\SalesTax as SalesTaxModel;
+use Ebay\Sell\Account\V1\Model\SalesTaxBase as SalesTaxBase;
+use Ebay\Sell\Account\V1\Model\SalesTaxes as SalesTaxes;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class SalesTax extends AbstractAPI

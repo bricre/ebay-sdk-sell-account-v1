@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -26,7 +26,7 @@ class ShippingService extends AbstractModel
      * listings or single-quantity, fixed-price listings.<br/><br/>This container is
      * returned if set.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $additionalShippingCost = null;
 
@@ -62,7 +62,7 @@ class ShippingService extends AbstractModel
      * due from the buyer upon the delivery of the item.<br/><br/>This container is
      * returned if set.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $cashOnDeliveryFee = null;
 
@@ -111,7 +111,7 @@ class ShippingService extends AbstractModel
      * <b>freeShipping</b> field is set to <code>true</code>.  <br/><br/>This container
      * is returned if set for the policy.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $shippingCost = null;
 
@@ -177,7 +177,7 @@ class ShippingService extends AbstractModel
      * href="https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/symbols-and-abbreviations.page">two-digit
      * abbreviations</a> used by the Canada Post.
      *
-     * @var \Ebay\sell\account\v1\Model\RegionSet
+     * @var \Ebay\Sell\Account\V1\Model\RegionSet
      */
     public $shipToLocations = null;
 
@@ -215,7 +215,7 @@ class ShippingService extends AbstractModel
      * </span><br/><br/>Shipping surcharges cannot be applied at all to international
      * shipping service options.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $surcharge = null;
 }

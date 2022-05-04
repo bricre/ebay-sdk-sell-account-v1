@@ -1,9 +1,9 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\Program as ProgramModel;
-use Ebay\sell\account\v1\Model\Programs as Programs;
+use Ebay\Sell\Account\V1\Model\Program as ProgramModel;
+use Ebay\Sell\Account\V1\Model\Programs as Programs;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class Program extends AbstractAPI

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -18,7 +18,7 @@ class ReturnPolicyRequest extends AbstractModel
      * must be set to <code>ALL_EXCLUDING_MOTORS_VEHICLES</code> for return business
      * policies.</span>.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -37,7 +37,7 @@ class ReturnPolicyRequest extends AbstractModel
      * all of the domestic return policy settings will also apply to international
      * orders.
      *
-     * @var \Ebay\sell\account\v1\Model\InternationalReturnOverrideType
+     * @var \Ebay\Sell\Account\V1\Model\InternationalReturnOverrideType
      */
     public $internationalOverride = null;
 
@@ -129,7 +129,7 @@ class ReturnPolicyRequest extends AbstractModel
      * <br/><br/><i>Required if </i> <b>returnsAccepted</b> is set to
      * <code>true</code>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $returnPeriod = null;
 

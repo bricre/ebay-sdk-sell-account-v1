@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -14,7 +14,7 @@ class PaymentPolicy extends AbstractModel
      * This container indicates whether the fulfillment policy applies to motor vehicle
      * listings, or if it applies to non-motor vehicle listings.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -30,7 +30,7 @@ class PaymentPolicy extends AbstractModel
      * commits to purchasing the motor vehicle through a fixed-price listing or through
      * the 'Buy it Now' option of an auction listing. </p>.
      *
-     * @var \Ebay\sell\account\v1\Model\Deposit
+     * @var \Ebay\Sell\Account\V1\Model\Deposit
      */
     public $deposit = null;
 
@@ -49,7 +49,7 @@ class PaymentPolicy extends AbstractModel
      * method is only available to sellers outside the US.</span></li>
      * <li>CASHIER_CHECK</li> <li>MONEY_ORDER</li><li>PERSONAL_CHECK</li></ul>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $fullPaymentDueIn = null;
 
@@ -103,7 +103,7 @@ class PaymentPolicy extends AbstractModel
      * the payment business policy is intended for motor vehicle listings or other
      * items in categories where offline payments are required or supported.
      *
-     * @var \Ebay\sell\account\v1\Model\PaymentMethod[]
+     * @var \Ebay\Sell\Account\V1\Model\PaymentMethod[]
      */
     public $paymentMethods = null;
 

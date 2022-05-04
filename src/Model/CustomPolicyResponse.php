@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -9,7 +9,7 @@ class CustomPolicyResponse extends AbstractModel
     /**
      * This array contains the custom policies that match the input criteria.
      *
-     * @var \Ebay\sell\account\v1\Model\CompactCustomPolicyResponse[]
+     * @var \Ebay\Sell\Account\V1\Model\CompactCustomPolicyResponse[]
      */
     public $customPolicies = null;
 

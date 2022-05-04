@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -14,7 +14,7 @@ class SetPaymentPolicyResponse extends AbstractModel
      * This container indicates whether the payment business policy applies to motor
      * vehicle listings, or if it applies to non-motor vehicle listings.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -23,7 +23,7 @@ class SetPaymentPolicyResponse extends AbstractModel
      * vehicles payment business policy and requires buyers to pay an initial deposit
      * after they commit to buying a motor vehicle.
      *
-     * @var \Ebay\sell\account\v1\Model\Deposit
+     * @var \Ebay\Sell\Account\V1\Model\Deposit
      */
     public $deposit = null;
 
@@ -33,7 +33,7 @@ class SetPaymentPolicyResponse extends AbstractModel
      * 3, 7, 10, or 14 days.<p class="tablenote"><b>Note:</b> This value is always
      * returned if <b>categoryTypes</b> is set to <code>MOTORS_VEHICLES</code>.</p>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $fullPaymentDueIn = null;
 
@@ -90,7 +90,7 @@ class SetPaymentPolicyResponse extends AbstractModel
      * empty unless the payment business policy is intended for motor vehicle listings
      * or other items in categories where offline payments are required or supported.
      *
-     * @var \Ebay\sell\account\v1\Model\PaymentMethod[]
+     * @var \Ebay\Sell\Account\V1\Model\PaymentMethod[]
      */
     public $paymentMethods = null;
 
@@ -107,7 +107,7 @@ class SetPaymentPolicyResponse extends AbstractModel
      * processing of the request. If there were no issues with the request, this array
      * will return empty.
      *
-     * @var \Ebay\sell\account\v1\Model\Error[]
+     * @var \Ebay\Sell\Account\V1\Model\Error[]
      */
     public $warnings = null;
 }

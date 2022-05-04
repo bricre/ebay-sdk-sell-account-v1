@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -17,7 +17,7 @@ class KycResponse extends AbstractModel
      * array is not returned, and the seller only receives a <code>204 No
      * Content</code> HTTP status code.
      *
-     * @var \Ebay\sell\account\v1\Model\KycCheck[]
+     * @var \Ebay\Sell\Account\V1\Model\KycCheck[]
      */
     public $kycChecks = null;
 }

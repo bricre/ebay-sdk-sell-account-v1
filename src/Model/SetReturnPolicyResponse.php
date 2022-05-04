@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -15,7 +15,7 @@ class SetReturnPolicyResponse extends AbstractModel
      * business policies, since return business policies are not applicable to motor
      * vehicle listings.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -35,7 +35,7 @@ class SetReturnPolicyResponse extends AbstractModel
      * defined by a seller, all of the domestic return policy settings will also apply
      * to international orders.
      *
-     * @var \Ebay\sell\account\v1\Model\InternationalReturnOverrideType
+     * @var \Ebay\Sell\Account\V1\Model\InternationalReturnOverrideType
      */
     public $internationalOverride = null;
 
@@ -115,7 +115,7 @@ class SetReturnPolicyResponse extends AbstractModel
      * returned unless the business policy states that the seller does not accept
      * returns.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $returnPeriod = null;
 
@@ -155,7 +155,7 @@ class SetReturnPolicyResponse extends AbstractModel
      * processing of the request. If there were no issues with the request, this array
      * will return empty.
      *
-     * @var \Ebay\sell\account\v1\Model\Error[]
+     * @var \Ebay\Sell\Account\V1\Model\Error[]
      */
     public $warnings = null;
 }

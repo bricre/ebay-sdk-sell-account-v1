@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -42,7 +42,7 @@ class PaymentMethod extends AbstractModel
      * for a marketplace, and a seller never has to specify any electronic payment
      * methods, including PayPal. </span>.
      *
-     * @var \Ebay\sell\account\v1\Model\RecipientAccountReference
+     * @var \Ebay\Sell\Account\V1\Model\RecipientAccountReference
      */
     public $recipientAccountReference = null;
 }

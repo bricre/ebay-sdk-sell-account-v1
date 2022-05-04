@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -14,7 +14,7 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * This container indicates whether the fulfillment business policy applies to
      * motor vehicle listings, or if it applies to non-motor vehicle listings.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -49,7 +49,7 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * deliver the order. <p>If only local pickup or freight shipping is available for
      * the item, this container may not get returned.</p>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $handlingTime = null;
 
@@ -99,7 +99,7 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * specify cost and other details for every available domestic and international
      * shipping service option. </p>.
      *
-     * @var \Ebay\sell\account\v1\Model\ShippingOption[]
+     * @var \Ebay\Sell\Account\V1\Model\ShippingOption[]
      */
     public $shippingOptions = null;
 
@@ -109,7 +109,7 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * provinces/domestic regions where the seller does and doesn't ship to with this
      * fulfillment policy.
      *
-     * @var \Ebay\sell\account\v1\Model\RegionSet
+     * @var \Ebay\Sell\Account\V1\Model\RegionSet
      */
     public $shipToLocations = null;
 
@@ -118,7 +118,7 @@ class SetFulfillmentPolicyResponse extends AbstractModel
      * processing of the request. If there were no issues with the request, this array
      * will return empty.
      *
-     * @var \Ebay\sell\account\v1\Model\Error[]
+     * @var \Ebay\Sell\Account\V1\Model\Error[]
      */
     public $warnings = null;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -15,7 +15,7 @@ class SalesTaxes extends AbstractModel
      * used.<br><br>If no sales tax rate entries are set up, no response payload is
      * returned, but only an HTTP status code of <code>204 No Content</code>.
      *
-     * @var \Ebay\sell\account\v1\Model\SalesTax[]
+     * @var \Ebay\Sell\Account\V1\Model\SalesTax[]
      */
     public $salesTaxes = null;
 }

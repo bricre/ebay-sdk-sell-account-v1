@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -24,7 +24,7 @@ class SellingPrivileges extends AbstractModel
      * returned if a seller does not have a monthly cap for total quantity sold and
      * total sales amount.
      *
-     * @var \Ebay\sell\account\v1\Model\SellingLimit
+     * @var \Ebay\Sell\Account\V1\Model\SellingLimit
      */
     public $sellingLimit = null;
 }

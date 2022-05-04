@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -16,7 +16,7 @@ class Deposit extends AbstractModel
      * payment is not required, and up to $500.00 if immediate payment is
      * required.<br/><br/><b>Max</b>: <code>2000.0</code>.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $amount = null;
 
@@ -32,7 +32,7 @@ class Deposit extends AbstractModel
      * vehicle.</span><br/><br/><b>Min</b>=24 (hours)<b>Max</b>=72 (hours),
      * <b>Default</b>=48 (hours).
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $dueIn = null;
 
@@ -40,7 +40,7 @@ class Deposit extends AbstractModel
      * This array is no longer applicable and should not be used since eBay now manages
      * the electronic payment options available to buyers to pay the deposit.
      *
-     * @var \Ebay\sell\account\v1\Model\PaymentMethod[]
+     * @var \Ebay\Sell\Account\V1\Model\PaymentMethod[]
      */
     public $paymentMethods = null;
 }

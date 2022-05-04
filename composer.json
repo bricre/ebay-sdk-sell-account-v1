@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ebay\\sell\\account\\v1\\": "/src"
+      "Ebay\\Sell\\Account\\V1\\": "/src"
     }
   }
 }

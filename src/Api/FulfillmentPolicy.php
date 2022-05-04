@@ -1,11 +1,11 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\FulfillmentPolicy as FulfillmentPolicyModel;
-use Ebay\sell\account\v1\Model\FulfillmentPolicyRequest as FulfillmentPolicyRequest;
-use Ebay\sell\account\v1\Model\FulfillmentPolicyResponse as FulfillmentPolicyResponse;
-use Ebay\sell\account\v1\Model\SetFulfillmentPolicyResponse as SetFulfillmentPolicyResponse;
+use Ebay\Sell\Account\V1\Model\FulfillmentPolicy as FulfillmentPolicyModel;
+use Ebay\Sell\Account\V1\Model\FulfillmentPolicyRequest as FulfillmentPolicyRequest;
+use Ebay\Sell\Account\V1\Model\FulfillmentPolicyResponse as FulfillmentPolicyResponse;
+use Ebay\Sell\Account\V1\Model\SetFulfillmentPolicyResponse as SetFulfillmentPolicyResponse;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class FulfillmentPolicy extends AbstractAPI

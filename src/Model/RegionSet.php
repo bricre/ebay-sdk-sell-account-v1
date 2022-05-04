@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -21,7 +21,7 @@ class RegionSet extends AbstractModel
      * to.<br/><br/>This array will be returned as empty if no shipping regions are
      * excluded with the fulfillment business policy.
      *
-     * @var \Ebay\sell\account\v1\Model\Region[]
+     * @var \Ebay\Sell\Account\V1\Model\Region[]
      */
     public $regionExcluded = null;
 
@@ -30,7 +30,7 @@ class RegionSet extends AbstractModel
      * a seller ships. <br><br>Each eBay marketplace supports its own set of allowable
      * shipping locations.
      *
-     * @var \Ebay\sell\account\v1\Model\Region[]
+     * @var \Ebay\Sell\Account\V1\Model\Region[]
      */
     public $regionIncluded = null;
 }

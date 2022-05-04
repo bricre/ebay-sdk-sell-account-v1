@@ -1,11 +1,11 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\CustomPolicy as CustomPolicyModel;
-use Ebay\sell\account\v1\Model\CustomPolicyCreateRequest as CustomPolicyCreateRequest;
-use Ebay\sell\account\v1\Model\CustomPolicyRequest as CustomPolicyRequest;
-use Ebay\sell\account\v1\Model\CustomPolicyResponse as CustomPolicyResponse;
+use Ebay\Sell\Account\V1\Model\CustomPolicy as CustomPolicyModel;
+use Ebay\Sell\Account\V1\Model\CustomPolicyCreateRequest as CustomPolicyCreateRequest;
+use Ebay\Sell\Account\V1\Model\CustomPolicyRequest as CustomPolicyRequest;
+use Ebay\Sell\Account\V1\Model\CustomPolicyResponse as CustomPolicyResponse;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class CustomPolicy extends AbstractAPI

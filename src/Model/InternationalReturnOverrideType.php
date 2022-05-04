@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -41,7 +41,7 @@ class InternationalReturnOverrideType extends AbstractModel
      * ends within 12 hours.  <br/><br/>This field is conditionally required if the
      * <b>internationalOverride.returnsAccepted</b> field is set to <code>true</code>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $returnPeriod = null;
 

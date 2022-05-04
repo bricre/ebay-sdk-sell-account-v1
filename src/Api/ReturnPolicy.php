@@ -1,11 +1,11 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\ReturnPolicy as ReturnPolicyModel;
-use Ebay\sell\account\v1\Model\ReturnPolicyRequest as ReturnPolicyRequest;
-use Ebay\sell\account\v1\Model\ReturnPolicyResponse as ReturnPolicyResponse;
-use Ebay\sell\account\v1\Model\SetReturnPolicyResponse as SetReturnPolicyResponse;
+use Ebay\Sell\Account\V1\Model\ReturnPolicy as ReturnPolicyModel;
+use Ebay\Sell\Account\V1\Model\ReturnPolicyRequest as ReturnPolicyRequest;
+use Ebay\Sell\Account\V1\Model\ReturnPolicyResponse as ReturnPolicyResponse;
+use Ebay\Sell\Account\V1\Model\SetReturnPolicyResponse as SetReturnPolicyResponse;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class ReturnPolicy extends AbstractAPI

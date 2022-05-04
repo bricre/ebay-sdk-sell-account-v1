@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -17,7 +17,7 @@ class ReturnPolicy extends AbstractModel
      * will always be <code>ALL_EXCLUDING_MOTORS_VEHICLES</code> for return business
      * policies.</span>.
      *
-     * @var \Ebay\sell\account\v1\Model\CategoryType[]
+     * @var \Ebay\Sell\Account\V1\Model\CategoryType[]
      */
     public $categoryTypes = null;
 
@@ -38,7 +38,7 @@ class ReturnPolicy extends AbstractModel
      * return policy is not set, all of the domestic return policy settings also apply
      * to international orders.
      *
-     * @var \Ebay\sell\account\v1\Model\InternationalReturnOverrideType
+     * @var \Ebay\Sell\Account\V1\Model\InternationalReturnOverrideType
      */
     public $internationalOverride = null;
 
@@ -120,7 +120,7 @@ class ReturnPolicy extends AbstractModel
      * <b>internationalOverride</b> container, this return period will be valid for
      * domestic and international returns (if the seller ships internationally).</span>.
      *
-     * @var \Ebay\sell\account\v1\Model\TimeDuration
+     * @var \Ebay\Sell\Account\V1\Model\TimeDuration
      */
     public $returnPeriod = null;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\PaymentPolicy as PaymentPolicyModel;
-use Ebay\sell\account\v1\Model\PaymentPolicyRequest as PaymentPolicyRequest;
-use Ebay\sell\account\v1\Model\PaymentPolicyResponse as PaymentPolicyResponse;
-use Ebay\sell\account\v1\Model\SetPaymentPolicyResponse as SetPaymentPolicyResponse;
+use Ebay\Sell\Account\V1\Model\PaymentPolicy as PaymentPolicyModel;
+use Ebay\Sell\Account\V1\Model\PaymentPolicyRequest as PaymentPolicyRequest;
+use Ebay\Sell\Account\V1\Model\PaymentPolicyResponse as PaymentPolicyResponse;
+use Ebay\Sell\Account\V1\Model\SetPaymentPolicyResponse as SetPaymentPolicyResponse;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class PaymentPolicy extends AbstractAPI

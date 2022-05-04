@@ -1,8 +1,8 @@
 <?php
 
-namespace Ebay\sell\account\v1\Api;
+namespace Ebay\Sell\Account\V1\Api;
 
-use Ebay\sell\account\v1\Model\RateTableResponse as RateTableResponse;
+use Ebay\Sell\Account\V1\Model\RateTableResponse as RateTableResponse;
 use OpenAPI\Runtime\AbstractAPI as AbstractAPI;
 
 class RateTable extends AbstractAPI

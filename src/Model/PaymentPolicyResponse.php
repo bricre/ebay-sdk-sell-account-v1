@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -45,7 +45,7 @@ class PaymentPolicyResponse extends AbstractModel
      * specified marketplace. This array will be returned as empty if no payment
      * business policies are defined for the specified marketplace.
      *
-     * @var \Ebay\sell\account\v1\Model\PaymentPolicy[]
+     * @var \Ebay\Sell\Account\V1\Model\PaymentPolicy[]
      */
     public $paymentPolicies = null;
 

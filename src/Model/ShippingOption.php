@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -32,7 +32,7 @@ class ShippingOption extends AbstractModel
      * a shipping carrier's shipping services and is no longer available via eBay
      * shipping policies.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $insuranceFee = null;
 
@@ -64,7 +64,7 @@ class ShippingOption extends AbstractModel
      * charges if they offered 'free shipping' in the policy.<br/><br/>This container
      * will only be returned if set for the policy.
      *
-     * @var \Ebay\sell\account\v1\Model\Amount
+     * @var \Ebay\Sell\Account\V1\Model\Amount
      */
     public $packageHandlingCost = null;
 
@@ -113,7 +113,7 @@ class ShippingOption extends AbstractModel
      * array is conditionally required if the seller is offering one or more domestic
      * and/or international shipping service options.
      *
-     * @var \Ebay\sell\account\v1\Model\ShippingService[]
+     * @var \Ebay\Sell\Account\V1\Model\ShippingService[]
      */
     public $shippingServices = null;
 }

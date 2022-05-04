@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebay\sell\account\v1\Model;
+namespace Ebay\Sell\Account\V1\Model;
 
 use OpenAPI\Runtime\AbstractModel as AbstractModel;
 
@@ -84,7 +84,7 @@ class Error extends AbstractModel
      * <code>ErrorParameter</code> object consists of two fields, a <code>name</code>
      * and a <code>value</code>.
      *
-     * @var \Ebay\sell\account\v1\Model\ErrorParameter[]
+     * @var \Ebay\Sell\Account\V1\Model\ErrorParameter[]
      */
     public $parameters = null;
 
