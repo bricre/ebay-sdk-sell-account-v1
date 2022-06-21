@@ -3,6 +3,7 @@
 namespace Ebay\Sell\Account\V1\Api;
 
 use Ebay\Sell\Account\V1\Model\SellingPrivileges;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Privilege extends AbstractAPI
 {
@@ -12,9 +13,9 @@ class Privilege extends AbstractAPI
      * of their site-wide <b>sellingLimt</b> (the amount and quantity they can sell on
      * a given day).
      *
-     * @return SellingPrivileges
+     * @return SellingPrivileges|UnexpectedResponse
      */
-    public function gets(): SellingPrivileges
+    public function gets()
     {
         return $this->request(
         'getPrivileges',

@@ -3,6 +3,7 @@
 namespace Ebay\Sell\Account\V1\Api;
 
 use Ebay\Sell\Account\V1\Model\PaymentsProgramOnboardingResponse;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Onboarding extends AbstractAPI
 {
@@ -18,9 +19,9 @@ class Onboarding extends AbstractAPI
      * @param string $payments_program_type the type of payments program whose status
      *                                      is returned by the method
      *
-     * @return PaymentsProgramOnboardingResponse
+     * @return PaymentsProgramOnboardingResponse|UnexpectedResponse
      */
-    public function getPaymentsProgram(string $marketplace_id, string $payments_program_type): PaymentsProgramOnboardingResponse
+    public function getPaymentsProgram(string $marketplace_id, string $payments_program_type)
     {
         return $this->request(
         'getPaymentsProgramOnboarding',

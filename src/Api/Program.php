@@ -4,15 +4,16 @@ namespace Ebay\Sell\Account\V1\Api;
 
 use Ebay\Sell\Account\V1\Model\Program as ProgramModel;
 use Ebay\Sell\Account\V1\Model\Programs;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Program extends AbstractAPI
 {
     /**
      * This method gets a list of the seller programs that the seller has opted-in to.
      *
-     * @return Programs
+     * @return Programs|UnexpectedResponse
      */
-    public function getOptedIns(): Programs
+    public function getOptedIns()
     {
         return $this->request(
         'getOptedInPrograms',
@@ -36,9 +37,9 @@ class Program extends AbstractAPI
      *
      * @param ProgramModel $Model program being opted-in to
      *
-     * @return object
+     * @return object|UnexpectedResponse
      */
-    public function optInTo(ProgramModel $Model): object
+    public function optInTo(ProgramModel $Model)
     {
         return $this->request(
         'optInToProgram',
@@ -57,9 +58,9 @@ class Program extends AbstractAPI
      *
      * @param ProgramModel $Model program being opted-out of
      *
-     * @return object
+     * @return object|UnexpectedResponse
      */
-    public function optOutOf(ProgramModel $Model): object
+    public function optOutOf(ProgramModel $Model)
     {
         return $this->request(
         'optOutOfProgram',

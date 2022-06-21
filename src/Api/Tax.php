@@ -5,6 +5,7 @@ namespace Ebay\Sell\Account\V1\Api;
 use Ebay\Sell\Account\V1\Model\SalesTax;
 use Ebay\Sell\Account\V1\Model\SalesTaxBase;
 use Ebay\Sell\Account\V1\Model\SalesTaxes;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Tax extends AbstractAPI
 {
@@ -26,9 +27,9 @@ class Tax extends AbstractAPI
      *                               tax jurisdiction for the tax table entry you want to retrieve. Retrieve valid
      *                               jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.
      *
-     * @return SalesTax
+     * @return SalesTax|UnexpectedResponse
      */
-    public function get(string $countryCode, string $jurisdictionId): SalesTax
+    public function get(string $countryCode, string $jurisdictionId)
     {
         return $this->request(
         'getSalesTax',
@@ -71,9 +72,9 @@ class Tax extends AbstractAPI
      * @param SalesTaxBase $Model          a container that describes the how the sales tax is
      *                                     calculated
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function createOrReplace(string $countryCode, string $jurisdictionId, SalesTaxBase $Model): mixed
+    public function createOrReplace(string $countryCode, string $jurisdictionId, SalesTaxBase $Model): UnexpectedResponse
     {
         return $this->request(
         'createOrReplaceSalesTax',
@@ -98,9 +99,9 @@ class Tax extends AbstractAPI
      *                               tax jurisdiction whose table entry you want to delete. Retrieve valid
      *                               jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API.
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function delete(string $countryCode, string $jurisdictionId): mixed
+    public function delete(string $countryCode, string $jurisdictionId): UnexpectedResponse
     {
         return $this->request(
         'deleteSalesTax',
@@ -128,9 +129,9 @@ class Tax extends AbstractAPI
      *                       documentation at
      *                       https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum
      *
-     * @return SalesTaxes
+     * @return SalesTaxes|UnexpectedResponse
      */
-    public function getes(array $queries = []): SalesTaxes
+    public function getes(array $queries = [])
     {
         return $this->request(
         'getSalesTaxes',

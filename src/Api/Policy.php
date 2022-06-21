@@ -6,6 +6,7 @@ use Ebay\Sell\Account\V1\Model\ReturnPolicy;
 use Ebay\Sell\Account\V1\Model\ReturnPolicyRequest;
 use Ebay\Sell\Account\V1\Model\ReturnPolicyResponse;
 use Ebay\Sell\Account\V1\Model\SetReturnPolicyResponse;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Policy extends AbstractAPI
 {
@@ -28,9 +29,9 @@ class Policy extends AbstractAPI
      *                       to eBay API documentation at
      *                       https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
      *
-     * @return ReturnPolicyResponse
+     * @return ReturnPolicyResponse|UnexpectedResponse
      */
-    public function getReturnPolicies(array $queries = []): ReturnPolicyResponse
+    public function getReturnPolicies(array $queries = [])
     {
         return $this->request(
         'getReturnPolicies',
@@ -56,9 +57,9 @@ class Policy extends AbstractAPI
      *
      * @param ReturnPolicyRequest $Model Return policy request
      *
-     * @return SetReturnPolicyResponse
+     * @return SetReturnPolicyResponse|UnexpectedResponse
      */
-    public function create(ReturnPolicyRequest $Model): SetReturnPolicyResponse
+    public function create(ReturnPolicyRequest $Model)
     {
         return $this->request(
         'createReturnPolicy',
@@ -77,9 +78,9 @@ class Policy extends AbstractAPI
      * @param string $return_policy_id this path parameter specifies the of the return
      *                                 policy you want to retrieve
      *
-     * @return ReturnPolicy
+     * @return ReturnPolicy|UnexpectedResponse
      */
-    public function get(string $return_policy_id): ReturnPolicy
+    public function get(string $return_policy_id)
     {
         return $this->request(
         'getReturnPolicy',
@@ -101,9 +102,9 @@ class Policy extends AbstractAPI
      *                                              return policy you want to update
      * @param ReturnPolicyRequest $Model            container for a return policy request
      *
-     * @return SetReturnPolicyResponse
+     * @return SetReturnPolicyResponse|UnexpectedResponse
      */
-    public function update(string $return_policy_id, ReturnPolicyRequest $Model): SetReturnPolicyResponse
+    public function update(string $return_policy_id, ReturnPolicyRequest $Model)
     {
         return $this->request(
         'updateReturnPolicy',
@@ -122,9 +123,9 @@ class Policy extends AbstractAPI
      * @param string $return_policy_id this path parameter specifies the ID of the
      *                                 return policy you want to delete
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function delete(string $return_policy_id): mixed
+    public function delete(string $return_policy_id): UnexpectedResponse
     {
         return $this->request(
         'deleteReturnPolicy',
@@ -157,9 +158,9 @@ class Policy extends AbstractAPI
      *                       'name'	string	This query parameter specifies the seller-defined name of the
      *                       return policy you want to retrieve.
      *
-     * @return ReturnPolicy
+     * @return ReturnPolicy|UnexpectedResponse
      */
-    public function getByName(array $queries = []): ReturnPolicy
+    public function getByName(array $queries = [])
     {
         return $this->request(
         'getReturnPolicyByName',

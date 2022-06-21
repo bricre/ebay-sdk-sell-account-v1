@@ -3,6 +3,7 @@
 namespace Ebay\Sell\Account\V1\Api;
 
 use Ebay\Sell\Account\V1\Model\RateTableResponse;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Table extends AbstractAPI
 {
@@ -39,9 +40,9 @@ class Table extends AbstractAPI
      *                       all eBay marketplaces. For implementation help, refer to eBay API documentation
      *                       at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum
      *
-     * @return RateTableResponse
+     * @return RateTableResponse|UnexpectedResponse
      */
-    public function gets(array $queries = []): RateTableResponse
+    public function gets(array $queries = [])
     {
         return $this->request(
         'getRateTables',
